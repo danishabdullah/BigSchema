@@ -1,0 +1,21 @@
+spec-mode: "compact"
+
+myrecord:
+  type: "record"
+  fields:
+    - one, integer, nullable
+    - two, string, required
+    - three_ms, timestamp, nullable
+    - four, myrecord2, repeated
+
+myrecord2:
+  type: "record"
+  fields:
+    - one, bytes, required
+    - two, float, nullable
+
+table:
+  type: "table"
+  fields:
+    - column_1, myrecord, repeated
+    - column_2, integer, nullable

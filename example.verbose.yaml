@@ -1,0 +1,37 @@
+spec-mode: "verbose"
+
+myrecord:
+  type: "record"
+  fields:
+    - name: one
+      type: integer
+      mode: nullable
+    - name: two
+      type: string
+      mode: required
+    - name: three_ms
+      type: timestamp
+      mode: nullable
+    - name: four
+      type: myrecord2
+      mode: repeated
+
+myrecord2:
+  type: "record"
+  fields:
+    - name: one2
+      type: bytes
+      mode: required
+    - name: two2
+      type: float
+      mode: nullable
+
+table:
+  type: "table"
+  fields:
+    - name: column_1
+      type: myrecord
+      mode: repeated
+    - name: column_2
+      type: integer
+      mode: required
