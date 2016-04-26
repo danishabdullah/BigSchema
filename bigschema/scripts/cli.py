@@ -80,8 +80,9 @@ record:
     - name_of_column, type_of_column, mode_of_column
 """
 
+
 @click.command(help=help_text)
-@click.argument('source', type=click.Path(exists=True),)
+@click.argument('source', type=click.Path(exists=True), )
 @click.argument('destination', type=click.Path(exists=True), default='./schemas/')
 @click.option('--output-format', '-f', default="json", type=click.Choice(["java", "json"]),
               help="Which format to output the data in? Default is JSON")
@@ -97,7 +98,7 @@ def cli(source, destination, output_format, overwrite):
     path = Path(destination)
     if overwrite or path.is_file():
         if click.confirm("Given destination is a file. This operation will overwrite the contents of the file."
-                      "Do you want to continue?", abort=True):
+                         "Do you want to continue?", abort=True):
             res = "\n".join([v for v in output.values()])
             with open(destination, 'w') as file:
                 LOG.info("Writing output to {}".format(destination))

@@ -9,4 +9,3 @@ formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(messag
 ch.setFormatter(formatter)
 LOG.addHandler(ch)
 LOG.setLevel(logging.DEBUG)
-

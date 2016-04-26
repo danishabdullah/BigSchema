@@ -46,8 +46,8 @@ class Base(object):
                                   fields=serialized_fields, path_modifier=path_modifier)
         msg = ("Serializing Record\nIn >> <name: {name}, type: {type}, mode: {mode}. path_modifier: {path_modifier}"
                " fields: {fields}>\nOUT << {fmt}: {result}".format(name=name, type=type, mode=mode, fields=fields,
-                                                              path_modifier=path_modifier,
-                                                              fmt=self.__class__.__name__, result=res))
+                                                                   path_modifier=path_modifier,
+                                                                   fmt=self.__class__.__name__, result=res))
         LOG.debug(msg)
         return res
 
@@ -87,7 +87,6 @@ class Base(object):
             Base.insert_path_modifiers_to_table(fields, modifier)
         return spec
 
-
     @staticmethod
     def insert_path_modifiers_to_table(table, modifier="fields"):
         for item in table.get("fields"):
@@ -111,8 +110,6 @@ class JSON(Base):
 
 
 class Java(Base):
-
     def __init__(self, item_template=ITEM_JAVA, record_template=RECORD_JAVA, table_template=TABLE_JAVA,
                  spec_template=SPEC_JAVA):
         super().__init__(item_template, record_template, table_template, spec_template, field_separator="\n")
-
