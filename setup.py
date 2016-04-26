@@ -18,6 +18,9 @@ setup(
     license="BSD 3 Clause",
     long_description=open("readme.md").read(),
     packages=find_packages(),
+    package_data= {
+    '': ['requirements.txt', 'readme.md', 'LICENSE'],
+    },
     entry_points="""
     [console_scripts]
     bigschema=bigschema.scripts.cli:cli

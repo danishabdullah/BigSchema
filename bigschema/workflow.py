@@ -25,7 +25,7 @@ def workflow(filename, output_type='dict'):
         return res
     elif output_type == 'java':
         transformer = Java()
-        return {"pipeline": transformer.spec(tables)}
+        return {"Pipeline": transformer.spec(tables)}
     elif output_type == 'dict':
         return tables
     else:
