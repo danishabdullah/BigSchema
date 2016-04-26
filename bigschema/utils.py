@@ -63,7 +63,7 @@ def flatten_records(spec, records=None):
                     child_fields = set([field['type'] for field in field['fields']])
                     grandchild_records = child_fields.intersection(known_records)
                     if grandchild_records:
-                        flatten_records(spec, field)
+                        flatten_records(spec, {field['name']: field})
     LOG.debug("Flattened records specification is:\n".format(spec))
     return spec
 
