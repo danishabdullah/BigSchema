@@ -16,7 +16,7 @@ setup(
     version="1.0.2",
     url="https://github.com/danishabdullah/bigschema",
     license="BSD 3 Clause",
-    long_description=open("README.md").read(),
+    long_description=open("readme.md").read(),
     packages=find_packages(),
     entry_points="""
     [console_scripts]
