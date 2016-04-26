@@ -13,7 +13,7 @@ setup(
                 "and getting bigquery target output from the specification.",
     author="Danish Abdullah",
     author_email="dev@danishabdullah.com",
-    version="1.0.1",
+    version="1.0.2",
     url="https://github.com/danishabdullah/bigschema",
     license="BSD 3 Clause",
     long_description=open("README.md").read(),
