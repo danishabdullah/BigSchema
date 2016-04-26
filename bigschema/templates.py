@@ -9,8 +9,8 @@ TABLE_JSON = Template("""[$fields]""")
 SPEC_JSON = Template("""$tables""")
 
 ITEM_JAVA = Template(
-    """$path_modifier.add(new TableFieldSchema().setName("$name").setType("$type")).setMode("$mode");""")
-RECORD_JAVA = Template("""$path_modifier.add(new TableFieldSchema().setName("$name").setType("RECORD")).setMode("$mode").setFields(
+    """$path_modifier.add(new TableFieldSchema().setName("$name").setType("$type").setMode("$mode");""")
+RECORD_JAVA = Template("""$path_modifier.add(new TableFieldSchema().setName("$name").setType("RECORD").setMode("$mode").setFields(
     new ArrayList<TableFieldSchema>() {
         {$fields}
     });""")
